@@ -1,0 +1,38 @@
+[
+    {
+        "name": "ТОО Ocean furniture",
+        "price": null,
+        "url_of_image": null,
+        "product_url": null
+    },
+    {
+        "name": null,
+        "price": null,
+        "url_of_image": null,
+        "product_url": null
+    },
+    {
+        "name": "Стул барный Sheffilton SHT-S125-CN1",
+        "price": "88095.00",
+        "url_of_image": "https://images.satu.kz/201869695_w500_h500_stul-barnyj-sheffilton.jpg",
+        "product_url": "/p102788051-stul-barnyj-sheffilton.html"
+    },
+    {
+        "name": "Стул Sheffilton SHT-S126",
+        "price": "85470.00",
+        "url_of_image": "https://images.satu.kz/201869708_w500_h500_stul-sheffilton-sht-s126.jpg",
+        "product_url": "/p102788049-stul-sheffilton-sht.html"
+    },
+    {
+        "name": "Стул Sheffilton SHT-S126",
+        "price": "85470.00",
+        "url_of_image": "https://images.satu.kz/201869709_w500_h500_stul-sheffilton-sht-s126.jpg",
+        "product_url": "/p102788048-stul-sheffilton-sht.html"
+    },
+    {
+        "name": "Стул Sheffilton SHT-S110-CN1",
+        "price": "49665.00",
+        "url_of_image": "https://images.satu.kz/201909572_w500_h500_stul-sheffilton-sht-s110-cn1.jpg",
+        "product_url": "/p102788010-stul-sheffilton-sht.html"
+    }
+]

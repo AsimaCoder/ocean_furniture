@@ -1,0 +1,62 @@
+[
+    {
+        "name": "ТОО Ocean furniture",
+        "price": null,
+        "url_of_image": null,
+        "product_url": null
+    },
+    {
+        "name": null,
+        "price": null,
+        "url_of_image": null,
+        "product_url": null
+    },
+    {
+        "name": "Стол Sheffilton SHT-T45/140-180",
+        "price": "380415.00",
+        "url_of_image": "https://images.satu.kz/201869534_w500_h500_stol-sheffilton-sht-t45140-180.jpg",
+        "product_url": "/p102788057-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол Sheffilton SHT-T41/100-140",
+        "price": "251580.00",
+        "url_of_image": "https://images.satu.kz/201869633_w500_h500_stol-sheffilton-sht-t41100-140.jpg",
+        "product_url": "/p102788056-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол Sheffilton SHT-T41/100-140",
+        "price": "251580.00",
+        "url_of_image": "https://images.satu.kz/201869634_w500_h500_stol-sheffilton-sht-t41100-140.jpg",
+        "product_url": "/p102788055-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол Sheffilton SHT-T40/130-160",
+        "price": "230895.00",
+        "url_of_image": "https://images.satu.kz/201869647_w500_h500_stol-sheffilton-sht-t40130-160.jpg",
+        "product_url": "/p102788054-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол Sheffilton SHT-T40/130-160",
+        "price": "264285.00",
+        "url_of_image": "https://images.satu.kz/201869657_w500_h500_stol-sheffilton-sht-t40130-160.jpg",
+        "product_url": "/p102788053-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол Sheffilton SHT-T39/110-155",
+        "price": "213570.00",
+        "url_of_image": "https://images.satu.kz/201869691_w500_h500_stol-sheffilton-sht-t39110-155.jpg",
+        "product_url": "/p102788052-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол Sheffilton SHT-T36",
+        "price": "59640.00",
+        "url_of_image": "https://images.satu.kz/201873676_w500_h500_stol-sheffilton-sht-t36.jpg",
+        "product_url": "/p102788018-stol-sheffilton-sht.html"
+    },
+    {
+        "name": "Стол барный Sheffilton SHT-TU5-BS2/H110/80 ЛДСП",
+        "price": "127575.00",
+        "url_of_image": "https://images.satu.kz/201911535_w500_h500_stol-barnyj-sheffilton.jpg",
+        "product_url": "/p102788007-stol-barnyj-sheffilton.html"
+    }
+]

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ocean Furniture</title>
+    <meta charset="UTF-8"><!--idk-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--idk-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--idk-->
+    <link rel="stylesheet" type="text/css" href="styles/css_account.css">  <!--css from file--> 
+    <link rel="shortcut icon" type="image/x-icon" href="img/ocean_logo-mini.png">  <!--favicon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--delete-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--delete or not delete if it is reapites than delete-->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Include Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!--at least in down change the color of background-->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB4H6H5QXT"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-YB4H6H5QXT');
+</script>
+</head>
+
+<body>
+
+<!--script for carousel-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#carouselExample').carousel();
+    });
+</script>
+<!--script for carousel-->
+
+<!--img-->
+<div class="image-container">
+    <img src="../img/account.jpg" alt="main">
+</div>
+<br>
+<!--img-->
+<!--script for search bar-->
+<script>
+const searchIcon = document.getElementById("searchIcon");
+const searchInput = document.getElementById("searchInput");
+
+searchIcon.addEventListener("click", function() {
+    searchInput.style.display = (searchInput.style.display === "none") ? "block" : "none";
+    if (searchInput.style.display === "block") {
+        searchInput.focus();
+    }
+});
+</script>
+
+<!--  Form -->
+<div class="container">
+<h2 class="text-center" style="margin-top: 50px;">Sign up</h2>
+<div class="row" style="margin-top: 20px;">
+    <div class="col-md-6 offset-md-3">
+        <form id="messageForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                <div id="nameError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                <div id="emailError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary custom-primary-button" id="showPasswordButton">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="passwordError" class="error"></div>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                <label class="form-check-label" for="agreeCheckbox">I agree to the terms and conditions</label>
+            </div>
+            <div id="agreeCheckboxError" class="error"></div>
+            <button type="button" class="btn btn-primary custom-primary-button" id="sendButton" disabled>Send</button>
+        </form>
+    </div>
+</div>
+</div>
+
+<!-- jQuery Script -->
+<script>
+$(document).ready(function() {
+    // Toggle password visibility
+    $('#showPasswordButton').click(function() {
+        const passwordInput = $('#password');
+        const passwordType = passwordInput.attr('type');
+        if (passwordType === 'password') {
+            passwordInput.attr('type', 'text');
+            $('#showPasswordButton i').removeClass('fas fa-eye').addClass('fas fa-eye-slash');
+        } else {
+            passwordInput.attr('type', 'password');
+            $('#showPasswordButton i').removeClass('fas fa-eye-slash').addClass('fas fa-eye');
+        }
+    });
+
+    // Handle checkbox change
+    $('#agreeCheckbox').change(function() {
+        const sendButton = $('#sendButton');
+        if (this.checked) {
+            sendButton.prop('disabled', false);
+            $('#agreeCheckboxError').text('');
+        } else {
+            sendButton.prop('disabled', true);
+            $('#agreeCheckboxError').text('You must agree to the terms and conditions.');
+        }
+    });
+
+    // Handle form submission
+    $('#sendButton').click(function() {
+        const userConfirmed = confirm("Do you want to send your signup request?");
+        if (userConfirmed) {
+            alert("Your signup request has been sent!");
+            // You can submit the form or perform any other action here
+        } else {
+            alert("Signup request canceled.");
+            // Action to take if the user cancels the request
+        }
+    });
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
