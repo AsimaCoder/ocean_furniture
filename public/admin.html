@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="/css_account.css"> <!-- Путь к вашему CSS файлу -->
+</head>
+<body>
+<h1>Управление продуктами</h1>
+
+<!-- Форма для добавления нового продукта -->
+<form id="addProductForm">
+    <h2>Добавить новый продукт</h2>
+    <label for="name">Название:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="price">Цена:</label>
+    <input type="text" id="price" name="price" required><br>
+
+    <label for="image">Изображение (URL):</label>
+    <input type="text" id="image" name="url_of_image"><br>
+
+    <label for="imageFile">Изображение (Загрузка):</label>
+    <input type="file" id="imageFile" name="image"><br>
+
+    <button type="button" onclick="submitProduct()">Добавить продукт</button>
+</form>
+<script>
+    function submitProduct() {
+        const formData = new FormData();
+        formData.append('name', document.getElementById('name').value);
+        formData.append('price', document.getElementById('price').value);
+        formData.append('url_of_image', document.getElementById('image').value);
+
+        const imageFile = document.getElementById('imageFile').files[0];
+        if (imageFile) {
+            formData.append('image', imageFile);
+        }
+
+        fetch('/admin/add-product', {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert('Продукт добавлен!');
+                // Можно здесь же обновить список продуктов на странице, добавив новый продукт в таблицу
+                // Для этого, например, можно вызвать функцию, которая получает все продукты и обновляет таблицу
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ошибка при добавлении продукта');
+            });
+    }
+
+    // Функция для получения и отображения списка продуктов
+    function fetchProducts() {
+        // Здесь должен быть ваш код для получения списка продуктов с сервера и их отображения
+    }
+
+    // При загрузке страницы получаем список продуктов
+    document.addEventListener('DOMContentLoaded', fetchProducts);
+</script>
+
+<!-- Таблица для отображения и удаления продуктов -->
+<h2>Существующие продукты</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Цена</th>
+        <th>Изображение</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody id="productsList">
+
+<!-- Здесь будут строки с продуктами -->
+    <!-- Пример строки таблицы для продукта -->
+    <!--
+    <tr>
+        <td>Название продукта</td>
+        <td>Цена</td>
+        <td><img src="url_изображения" alt="Название продукта" style="width:100px;"></td>
+        <td>
+            <form action="/admin/delete-product" method="POST">
+                <input type="hidden" name="productId" value="ID_продукта">
+                <button type="submit">Удалить</button>
+            </form>
+        </td>
+    </tr>
+    -->
+    </tbody>
+</table>
+
+</body>
+</html>
